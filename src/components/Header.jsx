@@ -44,7 +44,10 @@ export function Header() {
             Home
           </NavLink>
           <NavLink to="/products" className="header-nav-link" onClick={() => setOpen(false)}>
-            Products
+            Women
+          </NavLink>
+           <NavLink to="/products" className="header-nav-link" onClick={() => setOpen(false)}>
+            Men
           </NavLink>
           <NavLink to="/about" className="header-nav-link" onClick={() => setOpen(false)}>
             About

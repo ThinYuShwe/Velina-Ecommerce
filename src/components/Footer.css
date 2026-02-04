@@ -16,18 +16,19 @@
 
 .footer-newsletter-text {
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-family: var(--roundFont);
 }
 
 .footer-newsletter-form {
   border: 1px solid black;
   background-color: white;
-  width: 40%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 0.6rem 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 3rem;
   position: relative;
 }
@@ -35,28 +36,38 @@
 .footer-newsletter-input {
   border: none;
   outline: none;
+  width: 80%;
+}
+
+.footer-newsletter-subtext {
+  font-size: 0.8rem;
+  font-family: var(--roundFont);
+  line-height: 1.6rem;
 }
 
 .footer-newsletter-btn {
   border: 1px solid black;
   background-color: black;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   position: absolute;
   right: 0.3rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-newsletter-icon {
-  width: 0.7rem;
+  width: 1rem;
 }
 
 /* Footer Links */
 .footer-links {
   display: flex;
   flex-direction: row;
-  gap: 4rem;
+  gap: 10rem;
 }
 
 .footer-links-left {
@@ -70,24 +81,26 @@
 .footer-links-group {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
+  font-family: var(--roundFont);
 }
 
 .footer-links-title {
-  color: var(--purpleColor);
+  color: var(--HeavypurpleColor);
   text-transform: uppercase;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  font-size: 0.7rem;
 }
 
 .footer-links-list {
   display: flex;
   flex-direction: column;
   list-style: none;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
 .footer-links-list li {
-  /* styles will go here */
+  font-size: 0.8rem;
 }
 
 /* Footer Bottom */
@@ -99,4 +112,10 @@
   font-size: 35vw;
   text-align: center;
   color: var(--purpleColor);
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-newsletter-form {
+    width: 40%;
+  }
 }
