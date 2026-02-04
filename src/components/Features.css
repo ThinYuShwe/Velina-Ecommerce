@@ -1,0 +1,15 @@
+.feature-page-icon-img {
+  width: 24px; /* Adjust size based on your icon's original size */
+  height: 24px;
+  object-fit: contain;
+}
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px; /* Gives that soft rounded look from your image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}

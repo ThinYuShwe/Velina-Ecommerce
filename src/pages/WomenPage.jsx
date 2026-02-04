@@ -12,12 +12,15 @@ import homePageImg3 from "../assets/HomePage/homePageImg3.avif";
 import homePageImg4 from "../assets/HomePage/homePageImg4.avif";
 import homePageImg5 from "../assets/HomePage/homePageImg5.avif";
 import homePageImg6 from "../assets/HomePage/homePageImg6.avif";
+import homePageImg7 from "../assets/HomePage/homePageImg7.avif";
+// import homePageImg8 from "../assets/HomePage/homePageImg8.avif";
+// import homePageImg9 from "../assets/HomePage/homePageImg9.avif";
 
 export function WomenPage() {
   return (
     <main className="women-page">
       <Header />
-    
+
       <section className="women-page-header">
         <h1 className="women-page-title">Women's Clothing</h1>
         <section className="women-section-collections">
@@ -108,7 +111,25 @@ export function WomenPage() {
             </div>
           </section>
           <section className="women-page-articles">
-            
+            <article className="feature-article">
+              <div>
+                <img src={homePageImg7} alt="Fashion Feature" />
+              </div>
+              <div className="feature-content">
+                <h2>Summer Style Inspo</h2>
+                <p>
+                  Discover effortless summer looks that blend comfort with bold
+                  design. From breezy linen tops to statement dresses — find
+                  your vibe for every sunny day.
+                </p>
+                <Link
+                  to="/articles/summer-style-inspo"
+                  className="feature-link"
+                >
+                  Read More
+                </Link>
+              </div>
+            </article>
           </section>
         </section>
       </section>

@@ -4,6 +4,7 @@ import HomePageBg from "../assets/HomePage/HomePageBg.mp4";
 import { Link } from "react-router-dom";
 import "../index.css";
 import "./HomePage.css";
+import Features from "../components/Features.jsx";
 import { useNavigate } from "react-router-dom";
 import rightArrow from "../assets/Homepage/right-arrow.png";
 import rightArrowWhite from "../assets/Homepage/right-arrow-white.png";
@@ -406,6 +407,7 @@ export function HomePage() {
           </div>
         </section>
       </div>
+      <Features />
       <Footer />
     </main>
   );
