@@ -7,6 +7,7 @@ import user from "../assets/shared/user.png";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export function Header() {
   const navigate = useNavigate();
@@ -38,7 +39,9 @@ export function Header() {
         <button className="icon-button" onClick={() => setOpen(true)}>
           <img src={hamburger} alt="Hamburger Menu" className="hamburger" />
         </button>
-        <p className="brand-name">Velina</p>
+        <Link to="/" className="brand-name">
+          Velina
+        </Link>
       </div>
 
       {/* <div className="header-right">
@@ -143,11 +146,11 @@ export function Header() {
             Men
           </NavLink>
           <NavLink
-            to="/about"
+            to="/aboutus"
             className="header-nav-link"
             onClick={() => setOpen(false)}
           >
-            About
+            About Us
           </NavLink>
         </nav>
       )}
