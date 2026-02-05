@@ -2,6 +2,7 @@ import React from "react";
 import "./Register.css";
 import { Header } from "../components/Header.jsx";
 import { Footer } from "../components/Footer.jsx";
+import Features from "../components/Features.jsx";
 import registerBg from "../assets/HomePage/homePageImg8.avif"; // Replace with your image path
 
 export function Register() {
@@ -15,8 +16,8 @@ export function Register() {
             <div className="form-header">
               <h2>Register</h2>
               <p>
-                Lorem ipsum dolor sit amet elit. Sapiente sit aut eos
-                consectetur adipisicing.
+                Join Velina to discover modern essentials in soft tones and
+                timeless cuts designed for you.
               </p>
             </div>
 
@@ -70,6 +71,7 @@ export function Register() {
           </div>
         </div>
       </div>
+      <Features />
       <Footer />
     </main>
   );

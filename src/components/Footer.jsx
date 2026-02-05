@@ -1,6 +1,7 @@
 import "./Footer.css";
 import "../index.css";
 import rightArrow from "../assets/HomePage/right-arrow-white.png";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
@@ -51,9 +52,17 @@ export function Footer() {
             <div className="footer-links-group">
               <h3 className="footer-links-title">Company</h3>
               <ul className="footer-links-list">
-                <li>About Us</li>
+                <li>
+                  <Link to="/aboutus" className="footer-link">
+                    About Us
+                  </Link>
+                </li>
                 <li>Careers</li>
-                <li>Contact Us</li>
+                <li>
+                  <Link to="/contact" className="footer-link">
+                    Contact Us
+                  </Link>
+                </li>
                 <li>Stores</li>
                 <li>Journal</li>
               </ul>

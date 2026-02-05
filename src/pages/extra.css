@@ -1,0 +1,99 @@
+.about-page-container {
+  background-color: #f8f1ff; /* Light purple background from image */
+  min-height: 100vh;
+  padding-bottom: 80px;
+
+  /* Hero Typography */
+  .about-hero {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    padding-top: 7rem;
+  }
+}
+
+.about-title {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  color: #3b1e54; /* Deep purple text */
+  margin-bottom: 1.5rem;
+}
+
+.about-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #5c4b75;
+  font-weight: 400;
+}
+
+/* Image Gallery Grid */
+.about-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-image-wrapper {
+  flex: 1;
+  aspect-ratio: 4 / 5;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect to mimic the playful feel */
+.about-image-wrapper:hover {
+  transform: translateY(-10px) rotate(1deg);
+}
+
+.about-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Specific background colors for the frames */
+.bg-purple {
+  background-color: #d1b3ff;
+}
+.bg-green {
+  background-color: #c9e4ca;
+}
+.bg-lavender {
+  background-color: #e2e2ff;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+@media (max-width: 1024px) {
+  .about-title {
+    font-size: 2.8rem;
+  }
+  .about-gallery {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-gallery {
+    flex-direction: column; /* Stack images on mobile */
+    gap: 30px;
+  }
+
+  .about-image-wrapper {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .about-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* from aboutus page css */

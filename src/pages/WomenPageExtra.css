@@ -1,0 +1,42 @@
+.women-page {
+  margin-top: 20rem;
+}
+
+.women-product-grid {
+  display: flex; /* Switch from grid to flex for easy horizontal layout */
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 1.5rem;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding-bottom: 15px; /* Space for the scrollbar so it doesn't touch the text */
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 2rem;
+}
+
+.women-product-card {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  scroll-snap-align: start; /* Works with snap-type above */
+}
+
+.women-product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  font-family: var(--roundFont);
+  font-weight: lighter;
+}
+
+.women-product-name {
+  font-size: 1.25rem;
+  font-weight: 200;
+}
+
+.women-product-price {
+  font-size: 1.1rem;
+}

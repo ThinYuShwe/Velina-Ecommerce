@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: var(--roundFont);
 }
 img {
   width: 100%;
@@ -12,11 +13,20 @@ img {
   --purpleColor: rgb(205, 152, 255);
   --LightpurpleColor: rgb(248, 235, 255);
   --HeavypurpleColor: rgb(175, 90, 255);
+  --darkpurpleColor: rgba(175, 90, 255, 0.627);
   --roundFont: "Google Sans", sans-serif;
   --lighterPurpleColor: rgb(231, 194, 255);
   --softgreen: rgb(223, 255, 223);
   --softpink: rgb(255, 220, 226);
+  --lightpink: rgba(255, 236, 239, 0.911);
+  --darkpink:rgb(255, 148, 164);
   --softblue: rgb(173, 243, 255);
   --softyellow: rgb(255, 249, 196);
   --headerBackgroundColor: rgba(255, 255, 255, 0.304);
+  --registerColor: #7986cb;
+  --fbColor: #adb5bd;
+  --googleColor: #ff7580;
+  --twitterColor: #6dc7ff;
+  --darkPink: rgb(255, 184, 196);
+  --softDark: rgba(53, 53, 53, 0.679);
 }

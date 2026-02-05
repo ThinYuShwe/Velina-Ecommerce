@@ -40,15 +40,14 @@ const Features = () => {
       {featureData.map((item, index) => (
         <article key={index} className="feature-page-card">
           <div className={`icon-box ${item.colorClass}`}>
-            {/* Swapped the <i> tag for an <img> tag */}
             <img
               src={item.img}
               alt={item.title}
               className="feature-page-icon-img"
             />
           </div>
-          <h3>{item.title}</h3>
-          <p>{item.desc}</p>
+          <h3 className="feature-page-title">{item.title}</h3>
+          <p className="feature-page-text">{item.desc}</p>
         </article>
       ))}
     </section>

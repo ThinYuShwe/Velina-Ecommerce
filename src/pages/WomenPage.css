@@ -1,42 +1,218 @@
-.women-page {
-  margin-top: 20rem;
+/* Layout Structure */
+.women-page-container {
+  background-color: #fcfcfc;
+  min-height: 100vh;
 }
 
-.women-product-grid {
-  display: flex; /* Switch from grid to flex for easy horizontal layout */
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 20px;
-  gap: 1.5rem;
-  overflow-x: auto; /* Enable horizontal scrolling */
-  padding-bottom: 15px; /* Space for the scrollbar so it doesn't touch the text */
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 2rem;
+.women-content-wrapper {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Sidebar fixed, Grid expands */
+  gap: 40px;
+  max-width: 1400px;
+  padding: 7rem 20px;
 }
 
-.women-product-card {
-  flex: 0 0 200px;
+/* Sidebar Styles */
+.women-sidebar {
+  padding-right: 20px;
+}
+
+.filter-group {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  scroll-snap-align: start; /* Works with snap-type above */
 }
 
-.women-product-info {
+.filter-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #666;
+  cursor: pointer;
+}
+
+/* Product Grid */
+.women-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.women-grid-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.collection-title {
+  font-family: "Playfair Display", serif; /* Use your Serif font here */
+  font-size: 2rem;
+}
+
+/* Product Card */
+.women-product-card {
+  background: white;
+  transition: transform 0.3s ease;
+}
+
+.women-product-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  aspect-ratio: 3 / 4;
+}
+
+.women-product-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.women-product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Floating Actions (Heart & Cart) */
+.product-actions {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
-  font-family: var(--roundFont);
-  font-weight: lighter;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.women-product-name {
-  font-size: 1.25rem;
-  font-weight: 200;
+.women-product-card:hover .product-actions {
+  opacity: 1;
+}
+
+.action-btn {
+  background: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Typography Details */
+.women-product-details {
+  padding: 15px 5px;
+}
+
+.women-product-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.women-product-desc {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 8px;
 }
 
 .women-product-price {
-  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+}
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+
+/* Tablets (iPad, small laptops) */
+@media (max-width: 1024px) {
+  .women-content-wrapper {
+    grid-template-columns: 200px 1fr; /* Narrower sidebar */
+    gap: 20px;
+  }
+
+  .collection-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Small Tablets & Large Phones */
+@media (max-width: 768px) {
+  .women-content-wrapper {
+    grid-template-columns: 1fr; /* Stack Sidebar on Top */
+  }
+
+  .women-sidebar {
+    display: flex; /* Turn sidebar into a horizontal bar */
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-right: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 20px;
+  }
+
+  .filter-group {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    flex: 1; /* Distribute filters evenly */
+    min-width: 150px;
+  }
+
+  .women-grid-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .women-product-grid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(200px, 1fr)
+    ); /* Smaller cards */
+    gap: 15px;
+  }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 480px) {
+  .women-product-grid {
+    grid-template-columns: 1fr 1fr; /* 2 items per row on mobile is standard for fashion */
+    gap: 10px;
+  }
+
+  .women-product-image-container {
+    border-radius: 8px; /* Slightly smaller radius for small cards */
+  }
+
+  .women-product-title {
+    font-size: 0.9rem;
+  }
+
+  .product-actions {
+    opacity: 1; /* Always show icons on mobile since there is no 'hover' */
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .action-btn {
+    padding: 6px; /* Smaller buttons for mobile */
+  }
 }

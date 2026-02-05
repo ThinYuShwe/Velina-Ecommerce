@@ -6,8 +6,10 @@ import closeIcon from "../assets/shared/icon-close.svg";
 import user from "../assets/shared/user.png";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 export function Header() {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [showAuth, setShowAuth] = useState(false); // state for auth links visibility
   const authRef = useRef(null); // ref for the auth links container
@@ -104,7 +106,11 @@ export function Header() {
           )}
         </div>
 
-        <button className="icon-button">
+        <button
+          className="icon-button"
+          onClick={() => navigate("/cart")}
+          aria-label="View Cart"
+        >
           <img src={shoppingBag} alt="Shopping Bag" className="shopping-bag" />
         </button>
       </div>
@@ -123,14 +129,14 @@ export function Header() {
             Home
           </NavLink>
           <NavLink
-            to="/products"
+            to="/women"
             className="header-nav-link"
             onClick={() => setOpen(false)}
           >
             Women
           </NavLink>
           <NavLink
-            to="/products"
+            to="/men"
             className="header-nav-link"
             onClick={() => setOpen(false)}
           >

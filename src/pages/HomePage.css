@@ -179,6 +179,7 @@
 
 .product-section-header p {
   font-family: var(--roundFont);
+  font-size: 1.1rem;
 }
 
 .product-card {
@@ -277,6 +278,8 @@
 
 .feature-description {
   line-height: 2rem;
+  font-size: 1.1rem;
+  font-family: var(--roundFont);
 }
 
 .feature-image-wrapper {
@@ -373,6 +376,8 @@
 }
 
 .pastel-section-subtitle {
+  font-family: var(--roundFont);
+  font-size: 1.1rem;
 }
 
 .pastel-product-row {

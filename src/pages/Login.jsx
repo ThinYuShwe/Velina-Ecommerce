@@ -4,6 +4,7 @@ import "../index.css";
 import "./HomePage.css";
 import "./Login.css";
 import "./util.css";
+import Features from "../components/Features.jsx";
 // import "./main.css";
 // import loginBg from "../assets/HomePage/LoginBg.jpg";
 import homePageImg1 from "../assets/HomePage/homePageImg1.avif";
@@ -99,6 +100,7 @@ export function Login() {
           </div>
         </div>
       </div>
+      <Features />
       <Footer />
     </main>
   );

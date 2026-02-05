@@ -1,139 +1,111 @@
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
-
-import "./HomePage.css";
-import "../index.css";
-import "./WomenPage.css";
-
-import homePageImg1 from "../assets/HomePage/homePageImg1.avif";
-import homePageImg2 from "../assets/HomePage/homePageImg2.avif";
-import homePageImg3 from "../assets/HomePage/homePageImg3.avif";
-import homePageImg4 from "../assets/HomePage/homePageImg4.avif";
-import homePageImg5 from "../assets/HomePage/homePageImg5.avif";
-import homePageImg6 from "../assets/HomePage/homePageImg6.avif";
 import homePageImg7 from "../assets/HomePage/homePageImg7.avif";
-// import homePageImg8 from "../assets/HomePage/homePageImg8.avif";
-// import homePageImg9 from "../assets/HomePage/homePageImg9.avif";
+import { Heart, ShoppingBag } from "lucide-react"; // Optional: using lucide-react for icons
+import Features from "../components/Features.jsx";
+
+import "./WomenPage.css";
+import homePageImg1 from "../assets/HomePage/homePageImg1.avif";
+// ... (keep other imports)
 
 export function WomenPage() {
+  const products = [
+    {
+      id: 1,
+      img: homePageImg1,
+      name: "Coral Curve Skirt",
+      price: "$85.00",
+      desc: "Silk and linen blend",
+    },
+    {
+      id: 2,
+      img: homePageImg7,
+      name: "Mist Ruffle Top",
+      price: "$113.00",
+      desc: "Lightweight summer knit",
+    },
+    // ... add more products
+  ];
+
   return (
-    <main className="women-page">
+    <main className="women-page-container">
       <Header />
 
-      <section className="women-page-header">
-        <h1 className="women-page-title">Women's Clothing</h1>
-        <section className="women-section-collections">
-          <section className="women-page-filters">
-            <div className="women-categories">
-              <h2 className="filter-title">Categories</h2>
-              <div className="filter-options">
-                <input type="checkbox" name="category" id="category1" />
-                <label htmlFor="category1">Dresses</label>
-
-                <input type="checkbox" name="category" id="category2" />
-                <label htmlFor="category2">Tops</label>
-
-                <input type="checkbox" name="category" id="category3" />
-                <label htmlFor="category3">Bottoms</label>
-              </div>
+      <div className="women-content-wrapper">
+        {/* SIDEBAR FILTERS */}
+        <aside className="women-sidebar">
+          <div className="filter-group">
+            <h3 className="filter-heading">Brand</h3>
+            <div className="filter-item">
+              <input type="checkbox" id="velina" />
+              <label htmlFor="velina">Velina</label>
             </div>
-            <div className="women-price">
-              <h2 className="filter-title">Price Range</h2>
-              <div className="filter-options">
-                <input type="checkbox" name="price" id="price1" />
-                <label htmlFor="price1">Under $25</label>
-
-                <input type="checkbox" name="price" id="price2" />
-                <label htmlFor="price2">$25 - $50</label>
-
-                <input type="checkbox" name="price" id="price3" />
-                <label htmlFor="price3">$50+</label>
-              </div>
+            <div className="filter-item">
+              <input type="checkbox" id="essentials" />
+              <label htmlFor="essentials">Essentials</label>
             </div>
-          </section>
-          <section className="women-product-section">
-            <div className="women-product-grid">
-              {[
-                {
-                  img: homePageImg1,
-                  name: "Coral Curve Skirt",
-                  price: "$85.00",
-                  to: "/product/coral-curve-skirt",
-                },
-                {
-                  img: homePageImg2,
-                  name: "Mist Ruffle Top",
-                  price: "$113",
-                  to: "/product/mist-ruffle-top",
-                },
-                {
-                  img: homePageImg3,
-                  name: "Willow Kint Top",
-                  price: "$95",
-                  to: "/product/willow-kint-top",
-                },
-                {
-                  img: homePageImg4,
-                  name: "Midnight Hoodie",
-                  price: "$97",
-                  to: "/product/midnight-hoodie",
-                },
-                {
-                  img: homePageImg5,
-                  name: "Willow Kint Top",
-                  price: "$95",
-                  to: "/product/willow-kint-top-2",
-                },
-                {
-                  img: homePageImg6,
-                  name: "Midnight Hoodie",
-                  price: "$97",
-                  to: "/product/midnight-hoodie-2",
-                },
-              ].map((product, index) => (
-                <article key={index} className="women-product-card">
-                  <figure className="women-product-image-wrapper">
-                    <Link to={product.to}>
-                      <img
-                        src={product.img}
-                        alt={product.name}
-                        className="women-product-image"
-                      />
-                    </Link>
-                  </figure>
-                  <div className="women-product-info">
-                    <p className="women-product-name">{product.name}</p>
-                    <p className="women-product-price">{product.price}</p>
+          </div>
+
+          <div className="filter-group">
+            <h3 className="filter-heading">Category</h3>
+            <div className="filter-item">
+              <input type="checkbox" id="dresses" />
+              <label htmlFor="dresses">Dresses</label>
+            </div>
+            <div className="filter-item">
+              <input type="checkbox" id="tops" />
+              <label htmlFor="tops">Tops</label>
+            </div>
+          </div>
+
+          <div className="filter-group">
+            <h3 className="filter-heading">Price Range</h3>
+            <div className="filter-item">
+              <input type="checkbox" id="dresses" />
+              <label htmlFor="prices">$10 - $100</label>
+            </div>
+            <div className="filter-item">
+              <input type="checkbox" id="tops" />
+              <label htmlFor="prices">$100 - $200</label>
+            </div>
+          </div>
+        </aside>
+
+        <section className="women-main-content">
+          <header className="women-grid-header">
+            <h1 className="collection-title">Women's Collection</h1>
+            <p className="product-count">{products.length} Products Found</p>
+          </header>
+
+          <div className="women-product-grid">
+            {products.map((product) => (
+              <article key={product.id} className="women-product-card">
+                <div className="women-product-image-container">
+                  <Link to={`/product/${product.id}`}>
+                    <img src={product.img} alt={product.name} />
+                  </Link>
+                  <div className="product-actions">
+                    <button className="action-btn">
+                      <Heart size={18} />
+                    </button>
+                    <button className="action-btn">
+                      <ShoppingBag size={18} />
+                    </button>
                   </div>
-                </article>
-              ))}
-            </div>
-          </section>
-          <section className="women-page-articles">
-            <article className="feature-article">
-              <div>
-                <img src={homePageImg7} alt="Fashion Feature" />
-              </div>
-              <div className="feature-content">
-                <h2>Summer Style Inspo</h2>
-                <p>
-                  Discover effortless summer looks that blend comfort with bold
-                  design. From breezy linen tops to statement dresses — find
-                  your vibe for every sunny day.
-                </p>
-                <Link
-                  to="/articles/summer-style-inspo"
-                  className="feature-link"
-                >
-                  Read More
-                </Link>
-              </div>
-            </article>
-          </section>
+                </div>
+                <div className="women-product-details">
+                  <h4 className="women-product-title">{product.name}</h4>
+                  <p className="women-product-desc">{product.desc}</p>
+                  <span className="women-product-price">{product.price}</span>
+                </div>
+              </article>
+            ))}
+          </div>
         </section>
-      </section>
+      </div>
 
+      <Features />
       <Footer />
     </main>
   );
