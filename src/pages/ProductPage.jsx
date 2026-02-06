@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Header } from "../components/Header.jsx";
 import { Footer } from "../components/Footer.jsx";
-import { useParams } from "react-router-dom"; // Import this to get the ID from the URL
-import data from "../data.json"; // Import your JSON data
+import { useParams } from "react-router-dom";
+import data from "../data.json";
 import "./ProductPage.css";
-
+import { useCart } from "../context/CartContext";
 export function ProductPage() {
   const { id } = useParams();
+  const { addToCart } = useCart();
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState("S");
 
@@ -21,6 +22,11 @@ export function ProductPage() {
   if (!product) {
     return <div className="error-message">Product not found.</div>;
   }
+
+  const handleAddToCart = () => {
+    addToCart(product, quantity, selectedSize);
+    alert("Added to cart!"); // Simple feedback
+  };
 
   return (
     <main className="product-page">
@@ -78,8 +84,9 @@ export function ProductPage() {
                 <span>{quantity}</span>
                 <button onClick={() => setQuantity(quantity + 1)}>+</button>
               </div>
-
-              <button className="add-to-cart-btn">Add to Cart</button>
+              <button className="add-to-cart-btn" onClick={handleAddToCart}>
+                Add to Cart
+              </button>
             </div>
           </div>
         </div>

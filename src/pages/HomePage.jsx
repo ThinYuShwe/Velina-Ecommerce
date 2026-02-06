@@ -8,23 +8,23 @@ import Features from "../components/Features.jsx";
 import { useNavigate } from "react-router-dom";
 import rightArrow from "../assets/Homepage/right-arrow.png";
 import rightArrowWhite from "../assets/Homepage/right-arrow-white.png";
-import homePageImg1 from "../assets/HomePage/homePageImg1.avif";
-import homePageImg2 from "../assets/HomePage/homePageImg2.avif";
-import homePageImg3 from "../assets/HomePage/homePageImg3.avif";
-import homePageImg4 from "../assets/HomePage/homePageImg4.avif";
 import girlImg1 from "../assets/HomePage/girlImg1.avif";
-import homePageImg5 from "../assets/HomePage/homePageImg5.avif";
-import homePageImg6 from "../assets/HomePage/homePageImg6.avif";
-import homePageImg7 from "../assets/HomePage/homePageImg7.avif";
-import homePageImg8 from "../assets/HomePage/homePageImg8.avif";
 import girlImgNoBg from "../assets/HomePage/girlImgNoBg.png";
 import homePageImg9 from "../assets/HomePage/homePageImg9.avif";
 import homePageImg10 from "../assets/HomePage/homePageImg10.avif";
 import homePageImg11 from "../assets/HomePage/homePageImg11.avif";
 import homePageImg12 from "../assets/HomePage/homePageImg12.avif";
-
+import data from "../data.json";
 export function HomePage() {
   const navigate = useNavigate();
+  const allProducts = [...data.Men, ...data.Women];
+
+  // Create a helper function to grab a specific product by ID
+  const getProduct = (id) => allProducts.find((item) => item.id === id) || {};
+
+  // Define the helper for images (Vite/Public folder fix)
+  const imgUrl = (path) =>
+    path ? `${import.meta.env.BASE_URL}${path.replace("public/", "")}` : "";
   return (
     <main className="home-page">
       <Header />
@@ -85,69 +85,73 @@ export function HomePage() {
           <div className="product-grid">
             <article className="product-card">
               <figure className="product-image-wrapper">
-                <Link>
+                {/* Get Product ID 1 */}
+                <Link to={`/product/${getProduct(1).id}`}>
                   <img
-                    src={homePageImg1}
-                    alt="Coral Curve Skirt"
+                    src={imgUrl(getProduct(1).img)}
+                    alt={getProduct(1).name}
                     className="product-image"
                   />
                 </Link>
-                <figcaption className="product-stock">Out of Stock</figcaption>
+                <figcaption className="product-stock">New Arrival</figcaption>
+              </figure>
+
+              <div className="product-info">
+                <p className="product-name">{getProduct(1).name}</p>
+                <p className="product-price">{getProduct(1).price}</p>
+              </div>
+            </article>
+
+            {/* To do another one, just change the ID number */}
+            <article className="product-card">
+              <figure className="product-image-wrapper">
+                <Link to={`/product/${getProduct(105).id}`}>
+                  <img
+                    src={imgUrl(getProduct(105).img)}
+                    alt={getProduct(105).name}
+                    className="product-image"
+                  />
+                </Link>
               </figure>
               <div className="product-info">
-                <p className="product-name">Coral Curve Skirt</p>
-                <p className="product-price">$85.00</p>
+                <p className="product-name">{getProduct(105).name}</p>
+                <p className="product-price">{getProduct(105).price}</p>
               </div>
             </article>
 
             <article className="product-card">
               <figure className="product-image-wrapper">
-                <Link>
+                {/* Get Product ID 1 */}
+                <Link to={`/product/${getProduct(2).id}`}>
                   <img
-                    src={homePageImg2}
-                    alt="Mist Ruffle Top"
+                    src={imgUrl(getProduct(2).img)}
+                    alt={getProduct(2).name}
                     className="product-image"
                   />
                 </Link>
-                <figcaption className="product-stock">Out of Stock</figcaption>
+                <figcaption className="product-stock">New Arrival</figcaption>
               </figure>
+
               <div className="product-info">
-                <p className="product-name">Mist Ruffle Top</p>
-                <p className="product-price">$113</p>
+                <p className="product-name">{getProduct(2).name}</p>
+                <p className="product-price">{getProduct(2).price}</p>
               </div>
             </article>
 
+            {/* To do another one, just change the ID number */}
             <article className="product-card">
               <figure className="product-image-wrapper">
-                <Link>
+                <Link to={`/product/${getProduct(102).id}`}>
                   <img
-                    src={homePageImg3}
-                    alt="Willow Kint Top"
+                    src={imgUrl(getProduct(102).img)}
+                    alt={getProduct(102).name}
                     className="product-image"
                   />
                 </Link>
-                <figcaption className="product-stock">Out of Stock</figcaption>
               </figure>
               <div className="product-info">
-                <p className="product-name">Willow Kint Top</p>
-                <p className="product-price">$95</p>
-              </div>
-            </article>
-
-            <article className="product-card">
-              <figure className="product-image-wrapper">
-                <Link>
-                  <img
-                    src={homePageImg4}
-                    alt="Midnight Hoodie"
-                    className="product-image"
-                  />
-                </Link>
-                <figcaption className="product-stock">Out of Stock</figcaption>
-              </figure>
-              <div className="product-info">
-                <p className="product-name">Midnight Hoodie</p>
-                <p className="product-price">$97</p>
+                <p className="product-name">{getProduct(102).name}</p>
+                <p className="product-price">{getProduct(102).price}</p>
               </div>
             </article>
           </div>
@@ -190,69 +194,73 @@ export function HomePage() {
           <div className="product-grid">
             <article className="product-card">
               <figure className="product-image-wrapper">
-                <Link>
+                {/* Get Product ID 1 */}
+                <Link to={`/product/${getProduct(3).id}`}>
                   <img
-                    src={homePageImg5}
-                    alt="Coral Curve Skirt"
+                    src={imgUrl(getProduct(3).img)}
+                    alt={getProduct(3).name}
                     className="product-image"
                   />
                 </Link>
-                <figcaption className="product-stock">Out of Stock</figcaption>
+                <figcaption className="product-stock">New Arrival</figcaption>
+              </figure>
+
+              <div className="product-info">
+                <p className="product-name">{getProduct(3).name}</p>
+                <p className="product-price">{getProduct(3).price}</p>
+              </div>
+            </article>
+
+            {/* To do another one, just change the ID number */}
+            <article className="product-card">
+              <figure className="product-image-wrapper">
+                <Link to={`/product/${getProduct(104).id}`}>
+                  <img
+                    src={imgUrl(getProduct(104).img)}
+                    alt={getProduct(104).name}
+                    className="product-image"
+                  />
+                </Link>
               </figure>
               <div className="product-info">
-                <p className="product-name">Coral Curve Skirt</p>
-                <p className="product-price">$85.00</p>
+                <p className="product-name">{getProduct(104).name}</p>
+                <p className="product-price">{getProduct(104).price}</p>
               </div>
             </article>
 
             <article className="product-card">
               <figure className="product-image-wrapper">
-                <Link>
+                {/* Get Product ID 1 */}
+                <Link to={`/product/${getProduct(6).id}`}>
                   <img
-                    src={homePageImg6}
-                    alt="Mist Ruffle Top"
+                    src={imgUrl(getProduct(6).img)}
+                    alt={getProduct(6).name}
                     className="product-image"
                   />
                 </Link>
-                <figcaption className="product-stock">Out of Stock</figcaption>
+                <figcaption className="product-stock">New Arrival</figcaption>
               </figure>
+
               <div className="product-info">
-                <p className="product-name">Mist Ruffle Top</p>
-                <p className="product-price">$113</p>
+                <p className="product-name">{getProduct(6).name}</p>
+                <p className="product-price">{getProduct(6).price}</p>
               </div>
             </article>
 
+            {/* To do another one, just change the ID number */}
             <article className="product-card">
               <figure className="product-image-wrapper">
-                <Link>
+                <Link to={`/product/${getProduct(106).id}`}>
                   <img
-                    src={homePageImg7}
-                    alt="Willow Kint Top"
+                    src={imgUrl(getProduct(106).img)}
+                    alt={getProduct(106).name}
                     className="product-image"
                   />
                 </Link>
-                <figcaption className="product-stock">Out of Stock</figcaption>
               </figure>
               <div className="product-info">
-                <p className="product-name">Willow Kint Top</p>
-                <p className="product-price">$95</p>
-              </div>
-            </article>
-
-            <article className="product-card">
-              <figure className="product-image-wrapper">
-                <Link>
-                  <img
-                    src={homePageImg8}
-                    alt="Midnight Hoodie"
-                    className="product-image"
-                  />
-                </Link>
-                <figcaption className="product-stock">Out of Stock</figcaption>
-              </figure>
-              <div className="product-info">
-                <p className="product-name">Midnight Hoodie</p>
-                <p className="product-price">$97</p>
+                <p className="product-name">{getProduct(106).name}</p>
+                <p className="product-price">{getProduct(106).price}</p>
               </div>
             </article>
           </div>

@@ -41,7 +41,7 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .product-title {
@@ -62,8 +62,11 @@
 
 .product-description {
   color: #555;
-  line-height: 1.6;
+  line-height: 2;
   margin-bottom: 2rem;
+  font-size: 1.1rem;
+  font-family: var(--roundFont);
+
 }
 
 /* Buttons & Selectors */
@@ -112,7 +115,7 @@
 .quantity-selector {
   display: flex;
   align-items: center;
-  border: 1px solid #eee;
+  border: 1px solid #000000;
   border-radius: 25px;
   padding: 5px 15px;
 }
@@ -127,13 +130,15 @@
 
 .add-to-cart-btn {
   flex-grow: 1;
-  background: #004a62; /* Your brand color */
+  /* background: #004a62; */
+  background-color: var(--googleColor);
   color: white;
   border: none;
   padding: 15px;
   border-radius: 30px;
   font-weight: 600;
   cursor: pointer;
+  letter-spacing: 0.2rem;
 }
 
 .stock-status {

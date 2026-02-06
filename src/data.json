@@ -6,7 +6,7 @@
       "price": "$45.00",
       "category": "Accessories",
       "img": "public/Women/WomenBangle1.avif",
-      "desc": "Handcrafted minimalist bangle."
+      "desc": "A masterclass in minimalist jewelry. This handcrafted bangle features a slender, polished profile designed to catch the light subtly. Perfect for stacking or wearing as a single statement piece to elevate your everyday ensemble."
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "price": "$30.00",
       "category": "Accessories",
       "img": "public/Women/WomenCap1.avif",
-      "desc": "Breathable cotton essential cap."
+      "desc": "Constructed from premium washed cotton for a lived-in feel from the very first wear. This essential cap features an adjustable strap and a breathable crown, making it the perfect companion for sunny morning walks or casual weekend outings."
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "price": "$120.00",
       "category": "Dresses",
       "img": "public/Women/WomenDress1.avif",
-      "desc": "Lightweight linen floral dress."
+      "desc": "Embrace the warmth of the season in this lightweight linen-blend dress. Featuring a delicate hand-painted floral motif and a flowy silhouette, it offers a breezy, effortless fit that transitions beautifully from a garden brunch to a seaside sunset."
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "price": "$150.00",
       "category": "Dresses",
       "img": "public/Women/WomenDress2.avif",
-      "desc": "Elegant silk for evening wear."
+      "desc": "Lustrous and sophisticated, this evening gown is cut from heavy-weight mulberry silk that drapes elegantly against the body. With its subtle sheen and timeless cut, it is designed for those special occasions where quiet luxury speaks volumes."
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "price": "$95.00",
       "category": "Dresses",
       "img": "public/Women/WomenDress3.avif",
-      "desc": "Everyday comfort in soft cotton."
+      "desc": "The ultimate everyday uniform. Crafted from ultra-soft organic cotton jersey, this dress provides maximum comfort without sacrificing style. Its relaxed fit and durable construction make it a reliable staple for the modern woman on the go."
     },
     {
       "id": 6,
@@ -46,7 +46,7 @@
       "price": "$55.00",
       "category": "Accessories",
       "img": "public/Women/WomenEarrings1.avif",
-      "desc": "14k gold plated classic hoops."
+      "desc": "Timeless elegance for your jewelry box. These 14k gold-plated hoops feature a lightweight hollow core for all-day comfort. Their classic diameter makes them versatile enough to pair with a white tee or a sophisticated evening blazer."
     },
     {
       "id": 7,
@@ -54,7 +54,7 @@
       "price": "$110.00",
       "category": "Pants",
       "img": "public/Women/WomenPants1.avif",
-      "desc": "High-waisted tailored fit."
+      "desc": "Precision-engineered for a flawless silhouette. These high-waisted trousers are made from a wrinkle-resistant wool blend with sharp pressed pleats. They offer a structured look that commands respect in the boardroom and elegance at dinner."
     },
     {
       "id": 8,
@@ -62,7 +62,7 @@
       "price": "$75.00",
       "category": "Tops",
       "img": "public/Women/WomenShirt.avif",
-      "desc": "Crisp white organic cotton shirt."
+      "desc": "A crisp, clean foundation for any wardrobe. This shirt is woven from high-thread-count organic cotton, offering a breathable yet structured feel. Wear it tucked for a professional look or oversized for a relaxed, borrowed-from-the-boys aesthetic."
     }
   ],
   "Men": [
@@ -72,7 +72,7 @@
       "price": "$90.00",
       "category": "Accessories",
       "img": "public/Men/menbag1.avif",
-      "desc": "Durable canvas messenger bag."
+      "desc": "Built for the urban commuter, this bag is crafted from water-repellent heavy canvas with reinforced leather stress points. It features an internal padded sleeve for laptops and multiple quick-access pockets for your daily essentials."
     },
     {
       "id": 102,
@@ -80,7 +80,7 @@
       "price": "$210.00",
       "category": "Accessories",
       "img": "public/Men/menbag2.avif",
-      "desc": "Premium leather travel bag."
+      "desc": "The perfect companion for short escapes. This spacious bag is made from top-grain pebbled leather that develops a beautiful patina over time. Includes a detachable shoulder strap and dedicated compartments for shoes and travel documents."
     },
     {
       "id": 103,
@@ -88,7 +88,7 @@
       "price": "$40.00",
       "category": "Accessories",
       "img": "public/Men/menhat1.avif",
-      "desc": "Warm wool blend cap."
+      "desc": "Knitted from a premium merino wool blend, this beanie offers exceptional warmth without the itch. Its classic ribbed texture and adjustable cuff provide a snug fit that keeps you insulated during the coldest winter months."
     },
     {
       "id": 104,
@@ -96,7 +96,7 @@
       "price": "$80.00",
       "category": "Tops",
       "img": "public/Men/menshirt1.avif",
-      "desc": "Tailored oxford shirt."
+      "desc": "The quintessential smart-casual shirt. Made from traditional oxford cloth with a subtle texture, this piece features a button-down collar and a tailored fit. It’s durable enough for daily wear and sharp enough for any social calendar."
     },
     {
       "id": 105,
@@ -104,7 +104,7 @@
       "price": "$70.00",
       "category": "Tops",
       "img": "public/Men/menshirt2.avif",
-      "desc": "Breathable linen for hot days."
+      "desc": "Stay cool when the temperature rises. This shirt is made from 100% sustainably sourced linen, known for its incredible breathability and moisture-wicking properties. Its relaxed drape and natural texture embody the spirit of vacation."
     },
     {
       "id": 106,
@@ -112,7 +112,7 @@
       "price": "$75.00",
       "category": "Tops",
       "img": "public/Men/menshirt3.avif",
-      "desc": "Soft brushed cotton flannel."
+      "desc": "A rugged staple for the cooler seasons. Our flannel is double-brushed for an incredibly soft hand-feel and extra insulation. Featuring a classic plaid pattern, it works perfectly as a standalone shirt or layered over a clean white tee."
     },
     {
       "id": 107,
@@ -120,7 +120,7 @@
       "price": "$35.00",
       "category": "Tops",
       "img": "public/Men/mentop1.avif",
-      "desc": "Essential heavyweight cotton tee."
+      "desc": "Not your average t-shirt. Constructed from a heavyweight 250gsm cotton, this tee features a reinforced collar that won't lose its shape. It’s a durable, high-quality essential designed to be the backbone of your wardrobe for years."
     },
     {
       "id": 108,
@@ -128,7 +128,7 @@
       "price": "$125.00",
       "category": "Outerwear",
       "img": "public/Men/menvest1.avif",
-      "desc": "Water-resistant layering vest."
+      "desc": "The ultimate layering piece for transitional weather. This vest features a lightweight diamond-quilted shell with synthetic insulation and a water-resistant finish. It provides core warmth without adding bulk, making it ideal for active outdoor use."
     },
     {
       "id": 109,
@@ -136,7 +136,7 @@
       "price": "$95.00",
       "category": "Pants",
       "img": "public/Men/metrousers1.avif",
-      "desc": "Versatile slim-fit trousers."
+      "desc": "A versatile bridge between denim and formal trousers. These chinos are made from a stretch-cotton twill that moves with you. With a modern slim-tapered leg and a soft-touch finish, they are as comfortable as they are polished."
     }
   ],
   "articles": [
@@ -144,19 +144,19 @@
       "id": 1,
       "title": "Summer Essentials for Her",
       "image": "public/Journal/J1.avif",
-      "excerpt": "A quiet manifesto on the beauty of slow living and intentional curation. In this piece, we explore why Velina exists—not just to sell beautiful things..."
+      "excerpt": "A quiet manifesto on the beauty of slow living and intentional curation. We explore why Velina exists—not just to sell beautiful things, but to encourage a lifestyle of quality over quantity."
     },
     {
       "id": 2,
       "title": "How to Style Minimal Accessories",
       "image": "public/Journal/J2.avif",
-      "excerpt": "A capsule wardrobe isn't about restriction. It's about clarity. It's a quiet rebellion against overconsumption and trend fatigue. A way of dressing..."
+      "excerpt": "A capsule wardrobe isn't about restriction; it's about clarity. It's a quiet rebellion against overconsumption. Learn how to let your personality shine through a few perfectly chosen pieces."
     },
     {
       "id": 3,
       "title": "Wardrobe Staples That Last",
       "image": "public/Journal/J3.avif",
-      "excerpt": "In a world where fast fashion dominates headlines and social media feeds are flooded with fleeting trends, we often forget the power of storytelling."
+      "excerpt": "In a world dominated by fast fashion and fleeting trends, we often forget the power of a well-made garment. Discover the textiles and techniques that ensure your favorite pieces stay in rotation for years."
     }
   ]
 }
