@@ -22,26 +22,30 @@ export function MenPage() {
         {/* SIDEBAR FILTERS */}
         <aside className="men-sidebar">
           <div className="filter-group">
-            <h3 className="filter-heading">Brand</h3>
-            <div className="filter-item">
-              <input type="checkbox" id="velina" />
-              <label htmlFor="velina">Velina</label>
-            </div>
-            <div className="filter-item">
-              <input type="checkbox" id="essentials" />
-              <label htmlFor="essentials">Essentials</label>
-            </div>
-          </div>
-
-          <div className="filter-group">
             <h3 className="filter-heading">Category</h3>
             <div className="filter-item">
               <input type="checkbox" id="dresses" />
-              <label htmlFor="dresses">Dresses</label>
+              <label htmlFor="dresses">Bag</label>
             </div>
             <div className="filter-item">
               <input type="checkbox" id="tops" />
-              <label htmlFor="tops">Tops</label>
+              <label htmlFor="tops">Hat</label>
+            </div>
+            <div className="filter-item">
+              <input type="checkbox" id="tops" />
+              <label htmlFor="tops">Top</label>
+            </div>
+            <div className="filter-item">
+              <input type="checkbox" id="tops" />
+              <label htmlFor="tops">Shirts</label>
+            </div>
+            <div className="filter-item">
+              <input type="checkbox" id="tops" />
+              <label htmlFor="tops">Vest</label>
+            </div>
+            <div className="filter-item">
+              <input type="checkbox" id="tops" />
+              <label htmlFor="tops">Trousers</label>
             </div>
           </div>
 
@@ -84,21 +88,6 @@ export function MenPage() {
           </div>
         </section>
 
-        {/* JOURNAL SIDEBAR */}
-        {/* <section className="journal-sidebar-grid">
-          <h2 className="side-journal-title">From the Journal</h2>
-          {articles &&
-            articles.slice(0, 3).map((article) => (
-              <div key={article.id} className="side-journal-card-mini">
-                <div className="side-journal-image-container">
-                  <img src={article.image} alt={article.title} />
-                </div>
-                <div className="side-journal-info">
-                  <h3 className="side-journal-card-title">{article.title}</h3>
-                </div>
-              </div>
-            ))}
-        </section> */}
         <section className="journal-sidebar-grid">
           <h2 className="side-journal-title">From the Journal</h2>
           {articles &&

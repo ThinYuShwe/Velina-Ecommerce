@@ -21,7 +21,7 @@ export function WomenPage() {
       <div className="women-content-wrapper">
         {/* SIDEBAR FILTERS */}
         <aside className="women-sidebar">
-          <div className="filter-group">
+          {/* <div className="filter-group">
             <h3 className="filter-heading">Brand</h3>
             <div className="filter-item">
               <input type="checkbox" id="velina" />
@@ -31,10 +31,38 @@ export function WomenPage() {
               <input type="checkbox" id="essentials" />
               <label htmlFor="essentials">Essentials</label>
             </div>
-          </div>
+          </div> */}
 
           <div className="filter-group">
             <h3 className="filter-heading">Category</h3>
+            <div className="filter-item">
+              <input type="checkbox" id="dresses" />
+              <label htmlFor="dresses">Bangle</label>
+            </div>
+            <div className="filter-item">
+              <input type="checkbox" id="dresses" />
+              <label htmlFor="dresses">Cap</label>
+            </div>
+            <div className="filter-item">
+              <input type="checkbox" id="dresses" />
+              <label htmlFor="dresses">Eearrings</label>
+            </div>
+            <div className="filter-item">
+              <input type="checkbox" id="dresses" />
+              <label htmlFor="dresses">Pants</label>
+            </div>
+            <div className="filter-item">
+              <input type="checkbox" id="dresses" />
+              <label htmlFor="dresses">Shirts</label>
+            </div>
+            <div className="filter-item">
+              <input type="checkbox" id="dresses" />
+              <label htmlFor="dresses">Sweaters</label>
+            </div>
+            <div className="filter-item">
+              <input type="checkbox" id="dresses" />
+              <label htmlFor="dresses">Skirts</label>
+            </div>
             <div className="filter-item">
               <input type="checkbox" id="dresses" />
               <label htmlFor="dresses">Dresses</label>
@@ -54,6 +82,10 @@ export function WomenPage() {
             <div className="filter-item">
               <input type="checkbox" id="price2" />
               <label htmlFor="price2">$100 - $200</label>
+            </div>
+            <div className="filter-item">
+              <input type="checkbox" id="price3" />
+              <label htmlFor="price2">$200 - $300</label>
             </div>
           </div>
         </aside>

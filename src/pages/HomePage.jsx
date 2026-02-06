@@ -61,7 +61,10 @@ export function HomePage() {
               />
             </button>
 
-            <button className="shop-btn shop-btn-men">
+            <button
+              className="shop-btn shop-btn-men"
+              onClick={() => navigate("/men")}
+            >
               <span className="shop-btn-text">Shop Men</span>
               <img
                 src={rightArrow}
