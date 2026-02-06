@@ -64,7 +64,11 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>Stores</li>
-                <li>Journal</li>
+                <li>
+                  <Link to="/journal" className="footer-link">
+                    Journal
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

@@ -1,0 +1,174 @@
+{
+  "women": [
+    {
+      "id": 1,
+      "name": "Classic Bangle",
+      "price": "$45.00",
+      "category": "Accessories",
+      "img": "/Women/WomenBangle1.avif",
+      "desc": "Handcrafted minimalist bangle."
+    },
+    {
+      "id": 2,
+      "name": "Signature Cap",
+      "price": "$30.00",
+      "category": "Accessories",
+      "img": "/Women/WomenCap1.avif",
+      "desc": "Breathable cotton essential cap."
+    },
+    {
+      "id": 3,
+      "name": "Floral Summer Dress",
+      "price": "$120.00",
+      "category": "Dresses",
+      "img": "/Women/WomenDress1.avif",
+      "desc": "Lightweight linen floral dress."
+    },
+    {
+      "id": 4,
+      "name": "Evening Silk Dress",
+      "price": "$150.00",
+      "category": "Dresses",
+      "img": "/Women/WomenDress2.avif",
+      "desc": "Elegant silk for evening wear."
+    },
+    {
+      "id": 5,
+      "name": "Casual Day Dress",
+      "price": "$95.00",
+      "category": "Dresses",
+      "img": "/Women/WomenDress3.avif",
+      "desc": "Everyday comfort in soft cotton."
+    },
+    {
+      "id": 6,
+      "name": "Gold Hoop Earrings",
+      "price": "$55.00",
+      "category": "Accessories",
+      "img": "/Women/WomenEarrings1.avif",
+      "desc": "14k gold plated classic hoops."
+    },
+    {
+      "id": 7,
+      "name": "Tailored Trousers",
+      "price": "$110.00",
+      "category": "Pants",
+      "img": "/Women/WomenPants1.avif",
+      "desc": "High-waisted tailored fit."
+    },
+    {
+      "id": 8,
+      "name": "Essential Button-Down",
+      "price": "$75.00",
+      "category": "Tops",
+      "img": "/Women/WomenShirt.avif",
+      "desc": "Crisp white organic cotton shirt."
+    },
+    {
+      "id": 9,
+      "name": "Denim Shorts",
+      "price": "$60.00",
+      "category": "Shorts",
+      "img": "/Women/WomenShorts1.avif",
+      "desc": "Classic cut denim shorts."
+    },
+    {
+      "id": 10,
+      "name": "Pleated Skirt",
+      "price": "$85.00",
+      "category": "Skirts",
+      "img": "/Women/WomenSkirt1.avif",
+      "desc": "Flowy pleated midi skirt."
+    },
+    {
+      "id": 11,
+      "name": "Knit Sweater",
+      "price": "$130.00",
+      "category": "Knitwear",
+      "img": "/Women/WomenSweater.avif",
+      "desc": "Warm wool-blend oversized sweater."
+    },
+    {
+      "id": 12,
+      "name": "Ruffle Top",
+      "price": "$65.00",
+      "category": "Tops",
+      "img": "/Women/WomenTop1.avif",
+      "desc": "Playful ruffle sleeve detail."
+    }
+  ],
+  "men": [
+    {
+      "id": 101,
+      "name": "Utility Messenger Bag",
+      "price": "$90.00",
+      "category": "Accessories",
+      "img": "/Men/menbag1.avif",
+      "desc": "Durable canvas messenger bag."
+    },
+    {
+      "id": 102,
+      "name": "Leather Weekender",
+      "price": "$210.00",
+      "category": "Accessories",
+      "img": "/Men/menbag2.avif",
+      "desc": "Premium leather travel bag."
+    },
+    {
+      "id": 103,
+      "name": "Classic Wool Hat",
+      "price": "$40.00",
+      "category": "Accessories",
+      "img": "/Men/menhat1.avif",
+      "desc": "Warm wool blend cap."
+    },
+    {
+      "id": 104,
+      "name": "Oxford Button-Down",
+      "price": "$80.00",
+      "category": "Tops",
+      "img": "/Men/menshirt1.avif",
+      "desc": "Tailored oxford shirt."
+    },
+    {
+      "id": 105,
+      "name": "Linen Summer Shirt",
+      "price": "$70.00",
+      "category": "Tops",
+      "img": "/Men/menshirt2.avif",
+      "desc": "Breathable linen for hot days."
+    },
+    {
+      "id": 106,
+      "name": "Casual Flannel",
+      "price": "$75.00",
+      "category": "Tops",
+      "img": "/Men/menshirt3.avif",
+      "desc": "Soft brushed cotton flannel."
+    },
+    {
+      "id": 107,
+      "name": "Crewneck Tee",
+      "price": "$35.00",
+      "category": "Tops",
+      "img": "/Men/mentop1.avif",
+      "desc": "Essential heavyweight cotton tee."
+    },
+    {
+      "id": 108,
+      "name": "Quilted Vest",
+      "price": "$125.00",
+      "category": "Outerwear",
+      "img": "/Men/menvest1.avif",
+      "desc": "Water-resistant layering vest."
+    },
+    {
+      "id": 109,
+      "name": "Slim Fit Chinos",
+      "price": "$95.00",
+      "category": "Pants",
+      "img": "/Men/metrousers1.avif",
+      "desc": "Versatile slim-fit trousers."
+    }
+  ]
+}

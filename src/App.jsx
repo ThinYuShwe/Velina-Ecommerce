@@ -7,6 +7,7 @@ import { Register } from "./pages/Register.jsx";
 import { CartPage } from "./pages/CartPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import AboutUsPage from "./pages/AboutUsPage.jsx";
+import JournalPage from "./pages/JournalPage.jsx";
 import "./App.css";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/aboutus" element={<AboutUsPage />} />
+        <Route path="/journal" element={<JournalPage />} />
       </Routes>
     </>
   );
