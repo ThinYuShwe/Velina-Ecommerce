@@ -143,17 +143,20 @@
     {
       "id": 1,
       "title": "Summer Essentials for Her",
-      "image": "public/Journal/J1.avif"
+      "image": "public/Journal/J1.avif",
+      "excerpt": "A quiet manifesto on the beauty of slow living and intentional curation. In this piece, we explore why Velina exists—not just to sell beautiful things..."
     },
     {
       "id": 2,
       "title": "How to Style Minimal Accessories",
-      "image": "public/Journal/J2.avif"
+      "image": "public/Journal/J2.avif",
+      "excerpt": "A capsule wardrobe isn't about restriction. It's about clarity. It's a quiet rebellion against overconsumption and trend fatigue. A way of dressing..."
     },
     {
       "id": 3,
       "title": "Wardrobe Staples That Last",
-      "image": "public/Journal/J3.avif"
+      "image": "public/Journal/J3.avif",
+      "excerpt": "In a world where fast fashion dominates headlines and social media feeds are flooded with fleeting trends, we often forget the power of storytelling."
     }
   ]
 }

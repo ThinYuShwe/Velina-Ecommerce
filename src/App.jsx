@@ -1,6 +1,7 @@
 import { HomePage } from "./pages/HomePage.jsx";
 import { Routes, Route } from "react-router-dom";
 import { WomenPage } from "./pages/WomenPage.jsx";
+import { MenPage } from "./pages/MenPage.jsx";
 import { Login } from "./pages/Login.jsx";
 import { ProductPage } from "./pages/ProductPage.jsx";
 import { Register } from "./pages/Register.jsx";
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/aboutus" element={<AboutUsPage />} />
         <Route path="/journal" element={<JournalPage />} />
+        <Route path="/men" element={<MenPage />} />
       </Routes>
     </>
   );
