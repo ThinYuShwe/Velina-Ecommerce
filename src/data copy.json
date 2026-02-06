@@ -63,6 +63,38 @@
       "category": "Tops",
       "img": "public/Women/WomenShirt.avif",
       "desc": "Crisp white organic cotton shirt."
+    },
+    {
+      "id": 9,
+      "name": "Denim Shorts",
+      "price": "$60.00",
+      "category": "Shorts",
+      "img": "public/Women/WomenShorts1.avif",
+      "desc": "Classic cut denim shorts."
+    },
+    {
+      "id": 10,
+      "name": "Pleated Skirt",
+      "price": "$85.00",
+      "category": "Skirts",
+      "img": "public/Women/WomenSkirt1.avif",
+      "desc": "Flowy pleated midi skirt."
+    },
+    {
+      "id": 11,
+      "name": "Knit Sweater",
+      "price": "$130.00",
+      "category": "Knitwear",
+      "img": "public/Women/WomenSweater.avif",
+      "desc": "Warm wool-blend oversized sweater."
+    },
+    {
+      "id": 12,
+      "name": "Ruffle Top",
+      "price": "$65.00",
+      "category": "Tops",
+      "img": "public/Women/WomenTop1.avif",
+      "desc": "Playful ruffle sleeve detail."
     }
   ],
   "Men": [
