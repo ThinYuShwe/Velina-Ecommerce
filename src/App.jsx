@@ -11,10 +11,12 @@ import AboutUsPage from "./pages/AboutUsPage.jsx";
 import JournalPage from "./pages/JournalPage.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/women" element={<WomenPage />} />

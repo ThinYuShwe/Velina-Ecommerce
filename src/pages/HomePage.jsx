@@ -156,7 +156,7 @@ export function HomePage() {
             </article>
           </div>
 
-          <button className="view-all-btn">
+          <Link to="/women" className="view-all-btn">
             <span>View All</span>
             <img
               src={rightArrow}
@@ -164,7 +164,7 @@ export function HomePage() {
               aria-hidden="true"
               className="view-all-icon"
             />
-          </button>
+          </Link>
         </section>
 
         <article className="feature-article">
@@ -265,15 +265,15 @@ export function HomePage() {
             </article>
           </div>
 
-          <button className="view-all-btn">
-            <span>View All</span>
+          <Link to="/men" className="view-all-btn">
+            <span className="view-all-btn-span">View All</span>
             <img
               src={rightArrow}
               alt=""
               aria-hidden="true"
               className="view-all-icon"
             />
-          </button>
+          </Link>
         </section>
 
         <article className="collection-article">

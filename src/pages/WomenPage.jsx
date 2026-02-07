@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
@@ -9,10 +9,65 @@ import data from "../data.json";
 
 import "./WomenPage.css";
 
+const PRICE_RANGES = [
+  { id: "price1", label: "$10 - $100", min: 10, max: 100 },
+  { id: "price2", label: "$100 - $200", min: 100, max: 200 },
+  { id: "price3", label: "$200 - $300", min: 200, max: 300 },
+];
+
 export function WomenPage() {
-  // Access women's products and articles from JSON
-  const products = data.Women;
+  const allProducts = data.Women;
   const articles = data.articles;
+
+  // Parse price string (e.g. "$45.00") to number
+  const parsePrice = (priceStr) => {
+    if (typeof priceStr === "number") return priceStr;
+    const num = parseFloat(String(priceStr).replace(/[^0-9.]/g, ""));
+    return isNaN(num) ? 0 : num;
+  };
+
+  // Get unique categories from women's products (sorted)
+  const categories = useMemo(() => {
+    const set = new Set(allProducts.map((p) => p.category));
+    return Array.from(set).sort();
+  }, [allProducts]);
+
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [selectedPriceRanges, setSelectedPriceRanges] = useState([]);
+
+  const toggleCategory = (category) => {
+    setSelectedCategories((prev) =>
+      prev.includes(category)
+        ? prev.filter((c) => c !== category)
+        : [...prev, category]
+    );
+  };
+
+  const togglePriceRange = (rangeId) => {
+    setSelectedPriceRanges((prev) =>
+      prev.includes(rangeId)
+        ? prev.filter((id) => id !== rangeId)
+        : [...prev, rangeId]
+    );
+  };
+
+  // Filter: first by category, then by price range
+  const products = useMemo(() => {
+    let list =
+      selectedCategories.length === 0
+        ? allProducts
+        : allProducts.filter((p) => selectedCategories.includes(p.category));
+
+    if (selectedPriceRanges.length === 0) return list;
+
+    const ranges = selectedPriceRanges.map((id) =>
+      PRICE_RANGES.find((r) => r.id === id)
+    ).filter(Boolean);
+    return list.filter((p) => {
+      const price = parsePrice(p.price);
+      return ranges.some((r) => price >= r.min && price <= r.max);
+    });
+  }, [allProducts, selectedCategories, selectedPriceRanges]);
 
   return (
     <main className="women-page-container">
@@ -21,72 +76,34 @@ export function WomenPage() {
       <div className="women-content-wrapper">
         {/* SIDEBAR FILTERS */}
         <aside className="women-sidebar">
-          {/* <div className="filter-group">
-            <h3 className="filter-heading">Brand</h3>
-            <div className="filter-item">
-              <input type="checkbox" id="velina" />
-              <label htmlFor="velina">Velina</label>
-            </div>
-            <div className="filter-item">
-              <input type="checkbox" id="essentials" />
-              <label htmlFor="essentials">Essentials</label>
-            </div>
-          </div> */}
-
           <div className="filter-group">
             <h3 className="filter-heading">Category</h3>
-            <div className="filter-item">
-              <input type="checkbox" id="dresses" />
-              <label htmlFor="dresses">Bangle</label>
-            </div>
-            <div className="filter-item">
-              <input type="checkbox" id="dresses" />
-              <label htmlFor="dresses">Cap</label>
-            </div>
-            <div className="filter-item">
-              <input type="checkbox" id="dresses" />
-              <label htmlFor="dresses">Eearrings</label>
-            </div>
-            <div className="filter-item">
-              <input type="checkbox" id="dresses" />
-              <label htmlFor="dresses">Pants</label>
-            </div>
-            <div className="filter-item">
-              <input type="checkbox" id="dresses" />
-              <label htmlFor="dresses">Shirts</label>
-            </div>
-            <div className="filter-item">
-              <input type="checkbox" id="dresses" />
-              <label htmlFor="dresses">Sweaters</label>
-            </div>
-            <div className="filter-item">
-              <input type="checkbox" id="dresses" />
-              <label htmlFor="dresses">Skirts</label>
-            </div>
-            <div className="filter-item">
-              <input type="checkbox" id="dresses" />
-              <label htmlFor="dresses">Dresses</label>
-            </div>
-            <div className="filter-item">
-              <input type="checkbox" id="tops" />
-              <label htmlFor="tops">Tops</label>
-            </div>
+            {categories.map((category) => (
+              <div key={category} className="filter-item">
+                <input
+                  type="checkbox"
+                  id={`cat-${category}`}
+                  checked={selectedCategories.includes(category)}
+                  onChange={() => toggleCategory(category)}
+                />
+                <label htmlFor={`cat-${category}`}>{category}</label>
+              </div>
+            ))}
           </div>
 
           <div className="filter-group">
             <h3 className="filter-heading">Price Range</h3>
-            <div className="filter-item">
-              <input type="checkbox" id="price1" />
-              <label htmlFor="price1">$10 - $100</label>
-            </div>
-            <div className="filter-item">
-              <input type="checkbox" id="price2" />
-              <label htmlFor="price2">$100 - $200</label>
-            </div>
-            <div className="filter-item">
-              <input type="checkbox" id="price3" />
-              <label htmlFor="price2">$200 - $300</label>
-            </div>
+            {PRICE_RANGES.map((range) => (
+              <div key={range.id} className="filter-item">
+                <input
+                  type="checkbox"
+                  id={range.id}
+                  checked={selectedPriceRanges.includes(range.id)}
+                  onChange={() => togglePriceRange(range.id)}
+                />
+                <label htmlFor={range.id}>{range.label}</label>
+              </div>
+            ))}
           </div>
         </aside>
 
@@ -98,7 +115,10 @@ export function WomenPage() {
           </header>
 
           <div className="women-product-grid">
-            {products.map((product) => (
+            {products.length === 0 ? (
+              <p className="women-no-products">No products match the selected filters.</p>
+            ) : (
+            products.map((product) => (
               <article key={product.id} className="women-product-card">
                 <div className="women-product-image-container">
                   <Link to={`/product/${product.id}`}>
@@ -112,7 +132,8 @@ export function WomenPage() {
                   <span className="women-product-price">{product.price}</span>
                 </div>
               </article>
-            ))}
+            ))
+            )}
           </div>
         </section>
 

@@ -240,10 +240,13 @@
   padding: 1rem 2rem;
   background-color: transparent;
   border: none;
+  text-decoration: none;
+  color: black;
 }
 
-.view-all-btn span {
+.view-all-btn-span {
   cursor: pointer;
+  font-family: var(--roundFont);
 }
 
 .view-all-icon {
