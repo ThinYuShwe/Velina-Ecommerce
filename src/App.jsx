@@ -9,6 +9,7 @@ import { CartPage } from "./pages/CartPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import AboutUsPage from "./pages/AboutUsPage.jsx";
 import JournalPage from "./pages/JournalPage.jsx";
+import JournalDetail from "./pages/JournalDetail.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import ScrollToTop from "./components/ScrollToTop";
@@ -27,8 +28,8 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/aboutus" element={<AboutUsPage />} />
         <Route path="/journal" element={<JournalPage />} />
+        <Route path="/journalDetail/:id" element={<JournalDetail />} />
         <Route path="/men" element={<MenPage />} />
-        
       </Routes>
     </>
   );

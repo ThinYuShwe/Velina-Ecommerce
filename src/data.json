@@ -139,24 +139,62 @@
       "desc": "A versatile bridge between denim and formal trousers. These chinos are made from a stretch-cotton twill that moves with you. With a modern slim-tapered leg and a soft-touch finish, they are as comfortable as they are polished."
     }
   ],
-  "articles": [
+  "journals": [
     {
       "id": 1,
-      "title": "Summer Essentials for Her",
+      "title": "The Art of Slowing Down: Why We Curate with Intention",
+      "date": "Wednesday, April 2, 2025",
+      "category": "Philosophy",
       "image": "public/Journal/J1.avif",
-      "excerpt": "A quiet manifesto on the beauty of slow living and intentional curation. We explore why Velina exists—not just to sell beautiful things, but to encourage a lifestyle of quality over quantity."
+      "excerpt": "A quiet manifesto on the beauty of slow living and intentional curation. We explore why Velina exists—not just to sell beautiful things, but to encourage a lifestyle of quality over quantity.",
+      "sections": [
+        {
+          "heading": "At Velaa, we built our store around this pause.",
+          "content": "In the fast-scroll, next-day-delivery world we live in, we often forget how to pause. How to breathe. How to notice the subtle things that shape our day—the texture of a soft linen napkin, the way morning light hits a ceramic cup, the quiet comfort of a well-made candle flickering beside your bed."
+        },
+        {
+          "heading": "A World Behind Every Object",
+          "content": "We spend months (sometimes longer) talking with independent makers, artisans, and small studios before we bring their work into Velaa. We want to understand the materials they use. The stories they tell. The values they live by."
+        }
+      ]
     },
     {
       "id": 2,
-      "title": "How to Style Minimal Accessories",
+      "title": "How to Build a Capsule Wardrobe You'll Actually Love",
+      "date": "Saturday, March 22, 2025",
+      "category": "Guide",
       "image": "public/Journal/J2.avif",
-      "excerpt": "A capsule wardrobe isn't about restriction; it's about clarity. It's a quiet rebellion against overconsumption. Learn how to let your personality shine through a few perfectly chosen pieces."
+      "excerpt": "A capsule wardrobe isn't about restriction; it's about clarity. It's a quiet rebellion against overconsumption. Learn how to let your personality shine through a few perfectly chosen pieces.",
+      "sections": [
+        {
+          "heading": "1. Define Your Everyday Rhythm",
+          "content": "Before you reach for hangers or shopping carts, take a moment to consider your life. Your real life. What does your day-to-day look like? What pieces do you constantly reach for? When do you feel most comfortable—most like yourself?",
+          "tip": "Write down your weekly routine and identify what kinds of outfits support each part of your day."
+        },
+        {
+          "heading": "2. Choose Pieces That Mix and Breathe",
+          "content": "A great capsule wardrobe is built around versatility and comfort. Think soft layers that can be styled up or down. Neutral tones that flow together. Silhouettes that feel timeless but not rigid.",
+          "tip": "Aim for 20-30 pieces per season (including shoes and outerwear) that can rotate effortlessly."
+        }
+      ]
     },
     {
       "id": 3,
-      "title": "Wardrobe Staples That Last",
+      "title": "The Future of Editorial Fashion: Crafting Stories That Last",
+      "date": "Saturday, April 12, 2025",
+      "category": "Editorial",
       "image": "public/Journal/J3.avif",
-      "excerpt": "In a world dominated by fast fashion and fleeting trends, we often forget the power of a well-made garment. Discover the textiles and techniques that ensure your favorite pieces stay in rotation for years."
+      "excerpt": "In a world dominated by fast fashion and fleeting trends, we often forget the power of a well-made garment. Discover the textiles and techniques that ensure your favorite pieces stay in rotation for years.",
+      "sections": [
+        {
+          "heading": "At Velaa, we are building our editorial vision around this storytelling.",
+          "content": "In a world where fast fashion dominates headlines and social media feeds are flooded with fleeting trends, we often forget the power of storytelling. The way a garment can carry a narrative. The way a look can evoke emotion."
+        },
+        {
+          "heading": "A World Behind Every Garment",
+          "content": "That hand-embroidered dress you fell in love with? It was crafted by a collective of women in a remote village, using traditional techniques passed down through generations. That tailored suit? It's made from sustainable fabrics by a designer who reinvests profits into local communities."
+        }
+      ]
     }
   ]
 }

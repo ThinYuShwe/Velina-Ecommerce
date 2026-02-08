@@ -28,10 +28,11 @@
 }
 
 .brand-name {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   text-decoration: none;
   color: black;
+  font-family: var(--uniqueFont);
 }
 
 .brand-name:hover {

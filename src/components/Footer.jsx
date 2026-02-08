@@ -41,12 +41,12 @@ export function Footer() {
           <div className="footer-links-left">
             <div className="footer-links-group">
               <h3 className="footer-links-title">Products</h3>
-              <ul className="footer-links-list">
-                <li>Women</li>
-                <li>Men</li>
-                <li>Collections</li>
-                <li>Categories</li>
-              </ul>
+              <nav className="footer-links-list">
+                <Link to="/women">Women</Link>
+                <Link to="/men">Men</Link>
+                <Link to="/">Collections</Link>
+                <Link to="/women">Categories</Link>
+              </nav>
             </div>
 
             <div className="footer-links-group">

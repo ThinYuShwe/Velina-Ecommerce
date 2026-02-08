@@ -1,0 +1,93 @@
+.journal-entry-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  font-family: 'Inter', sans-serif; /* Replace with your theme font */
+  line-height: 1.6;
+  color: #333;
+}
+
+.journal-entry-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.journal-category {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.journal-main-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.journal-date {
+  font-style: italic;
+  color: #666;
+}
+
+.journal-hero-wrapper {
+  margin: 0 -20px 60px -20px; /* Bleeds out slightly on mobile */
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.journal-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.journal-content-body {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.journal-section {
+  margin-bottom: 50px;
+}
+
+.journal-section-heading {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+
+.journal-text-content {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.journal-tip-box {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-left: 3px solid #333;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.journal-footer-nav {
+  margin-top: 80px;
+  text-align: center;
+  border-top: 1px solid #eee;
+  padding-top: 40px;
+}
+
+.back-to-journal {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.back-to-journal:hover {
+  opacity: 0.6;
+}

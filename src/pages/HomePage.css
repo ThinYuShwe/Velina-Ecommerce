@@ -323,6 +323,7 @@
 }
 
 .collection-description {
+  font-family: var(--roundFont);
 }
 
 .collection-btn {
@@ -417,6 +418,10 @@
   left: 50%;
   transform: translateX(-50%);
   border-radius: 1rem;
+}
+
+.pastel-product-color-theme {
+  font-family: var(--roundFont);
 }
 
 .blage-1 {

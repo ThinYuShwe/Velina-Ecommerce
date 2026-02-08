@@ -49,10 +49,16 @@
   padding-top: 7rem; */
 }
 
+
+
 /* Card Styling */
 .journal-card {
   display: flex;
   flex-direction: column;
+}
+
+.journal-card-link{
+  text-decoration: none;
 }
 
 .journal-image-container {

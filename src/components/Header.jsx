@@ -1,7 +1,7 @@
 import "../index.css";
 import "./Header.css";
 import hamburger from "../assets/shared/hamburger.png";
-import shoppingBag from "../assets/shared/shopping-bag.png";
+import shoppingBag from "../assets/shared/shopping-cart.png";
 import closeIcon from "../assets/shared/icon-close.svg";
 import user from "../assets/shared/user.png";
 import { NavLink } from "react-router-dom";

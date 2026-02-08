@@ -284,7 +284,10 @@ export function HomePage() {
               playful. Inspired by pastels, natural textures, and everyday
               essentials.
             </p>
-            <button className="collection-btn">
+            <button
+              className="collection-btn"
+              onClick={() => navigate("/women")}
+            >
               <span className="collection-btn-text">Explore Collection</span>
               <img
                 src={rightArrowWhite}
@@ -325,7 +328,10 @@ export function HomePage() {
                   <p className="pastel-product-color-theme">
                     Light, flowy, easy
                   </p>
-                  <button className="pastel-view-all-btn">
+                  <button
+                    className="pastel-view-all-btn"
+                    onClick={() => navigate("/women")}
+                  >
                     <span className="pastel-view-all-text">Shop Now</span>
                     <img
                       src={rightArrowWhite}
@@ -351,7 +357,10 @@ export function HomePage() {
                   <p className="pastel-product-color-theme">
                     Light, flowy, easy
                   </p>
-                  <button className="pastel-view-all-btn">
+                  <button
+                    className="pastel-view-all-btn"
+                    onClick={() => navigate("/women")}
+                  >
                     <span className="pastel-view-all-text">Shop Now</span>
                     <img
                       src={rightArrowWhite}
@@ -377,7 +386,10 @@ export function HomePage() {
                   <p className="pastel-product-color-theme">
                     Light, flowy, easy
                   </p>
-                  <button className="pastel-view-all-btn">
+                  <button
+                    className="pastel-view-all-btn"
+                    onClick={() => navigate("/women")}
+                  >
                     <span className="pastel-view-all-text">Shop Now</span>
                     <img
                       src={rightArrowWhite}
@@ -403,7 +415,10 @@ export function HomePage() {
                   <p className="pastel-product-color-theme">
                     Light, flowy, easy
                   </p>
-                  <button className="pastel-view-all-btn">
+                  <button
+                    className="pastel-view-all-btn"
+                    onClick={() => navigate("/women")}
+                  >
                     <span className="pastel-view-all-text">Shop Now</span>
                     <img
                       src={rightArrowWhite}

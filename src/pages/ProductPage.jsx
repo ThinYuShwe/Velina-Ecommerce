@@ -1,35 +1,84 @@
-import React, { useState } from "react";
+import React, { useState, useMemo, useRef, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import { Header } from "../components/Header.jsx";
 import { Footer } from "../components/Footer.jsx";
-import { useParams } from "react-router-dom";
 import data from "../data.json";
 import "./ProductPage.css";
 import { useCart } from "../context/CartContext";
+
+const RECOMMENDATION_COUNT = 4;
+
+function imgUrl(path) {
+  if (!path) return "";
+  return `${import.meta.env.BASE_URL}${path.replace("public/", "")}`;
+}
+
 export function ProductPage() {
   const { id } = useParams();
   const { addToCart } = useCart();
   const [quantity, setQuantity] = useState(1);
   const [selectedSize, setSelectedSize] = useState("S");
+  const [showAddedMessage, setShowAddedMessage] = useState(false);
+  const messageTimerRef = useRef(null);
 
-  // Combine Men and Women arrays to search for the product
-  const allProducts = [...data.Men, ...data.Women];
-
-  // Find the product that matches the ID from the URL
-  // We use Number(id) because params are strings, but IDs in JSON are numbers
+  const allProducts = useMemo(
+    () => [...data.Men, ...data.Women],
+    []
+  );
   const product = allProducts.find((p) => p.id === Number(id));
 
-  // If the product hasn't been found yet, show a loading state or error
+  // Similar items: same gender only (Women id < 100, Men id >= 100), then same category first, exclude current
+  const recommendations = useMemo(() => {
+    if (!product) return [];
+    const currentId = product.id;
+    const isWomen = (p) => p.id < 100;
+    const sameGender = (p) => isWomen(p) === isWomen(product);
+    const sameCategory = (p) => p.category === product.category;
+
+    const pool = allProducts
+      .filter((p) => p.id !== currentId && sameGender(p))
+      .sort((a, b) => {
+        const catA = sameCategory(a) ? 1 : 0;
+        const catB = sameCategory(b) ? 1 : 0;
+        return catB - catA; 
+      });
+
+    return pool.slice(0, RECOMMENDATION_COUNT);
+  }, [product, allProducts]);
+
+  useEffect(() => () => {
+    if (messageTimerRef.current) clearTimeout(messageTimerRef.current);
+  }, []);
+
   if (!product) {
     return <div className="error-message">Product not found.</div>;
   }
 
   const handleAddToCart = () => {
     addToCart(product, quantity, selectedSize);
-    alert("Added to cart!"); // Simple feedback
+    if (messageTimerRef.current) clearTimeout(messageTimerRef.current);
+    setShowAddedMessage(true);
+    messageTimerRef.current = setTimeout(() => {
+      setShowAddedMessage(false);
+      messageTimerRef.current = null;
+    }, 3000);
   };
 
   return (
     <main className="product-page">
+      {showAddedMessage && (
+        <div className="add-to-cart-message" role="status" aria-live="polite">
+          <p className="add-to-cart-message-text">Added to cart!</p>
+          <button
+            type="button"
+            className="add-to-cart-message-close"
+            onClick={() => setShowAddedMessage(false)}
+            aria-label="Dismiss"
+          >
+            ×
+          </button>
+        </div>
+      )}
       <Header />
       <div className="product-container">
         <nav className="breadcrumb">
@@ -91,6 +140,36 @@ export function ProductPage() {
           </div>
         </div>
       </div>
+
+      {recommendations.length > 0 && (
+        <section className="recommendation-section" aria-label="You might also like">
+          <h2 className="recommendation-heading">You might also like</h2>
+          <div className="recommendation-product-grid">
+            {recommendations.map((rec, index) => (
+              <article key={rec.id} className="recommendation-product-card">
+                <figure className="recommendation-product-image-wrapper">
+                  <Link to={`/product/${rec.id}`}>
+                    <img
+                      src={imgUrl(rec.img)}
+                      alt={rec.name}
+                      className="recommendation-product-image"
+                    />
+                  </Link>
+                  {index === 0 && (
+                    <figcaption className="recommendation-product-stock">
+                      New Arrival
+                    </figcaption>
+                  )}
+                </figure>
+                <div className="recommendation-product-info">
+                  <p className="recommendation-product-name">{rec.name}</p>
+                  <p className="recommendation-product-price">{rec.price}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
       <Footer />
     </main>
   );

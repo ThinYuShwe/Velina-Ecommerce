@@ -17,7 +17,7 @@ const PRICE_RANGES = [
 
 export function MenPage() {
   const allProducts = data.Men;
-  const articles = data.articles;
+  const journals = data.journals;
 
   const parsePrice = (priceStr) => {
     if (typeof priceStr === "number") return priceStr;
@@ -135,16 +135,23 @@ export function MenPage() {
 
         <section className="journal-sidebar-grid">
           <h2 className="side-journal-title">From the Journal</h2>
-          {articles &&
-            articles.slice(0, 3).map((article) => (
-              <div key={article.id} className="side-journal-card-mini">
+          {journals &&
+            journals.slice(0, 3).map((journal) => (
+              <Link
+                key={journal.id}
+                to={`/journalDetail/${journal.id}`}
+                className="side-journal-card-mini"
+              >
                 <div className="side-journal-image-container">
-                  <img src={article.image} alt={article.title} />
+                  <img
+                    src={`${import.meta.env.BASE_URL}${(journal.image || "").replace("public/", "")}`}
+                    alt={journal.title}
+                  />
                 </div>
                 <div className="side-journal-info">
-                  <h3 className="side-journal-card-title">{article.title}</h3>
+                  <h3 className="side-journal-card-title">{journal.title}</h3>
                 </div>
-              </div>
+              </Link>
             ))}
         </section>
       </div>
