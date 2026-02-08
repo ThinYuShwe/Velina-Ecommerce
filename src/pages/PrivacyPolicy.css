@@ -1,0 +1,109 @@
+/* Container and General Font */
+.privacy-container {
+  font-family: 'Inter', sans-serif; /* Replace with your site font */
+  color: #1a1a1a;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* Hero Section with Blue Gradient */
+.privacy-hero {
+  background: linear-gradient(to right, #d0e4f5 0%, #ffffff 100%);
+  padding: 80px 10% 120px 10%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #0c3559; /* Dark blue from image */
+}
+
+.hero-content p {
+  max-width: 500px;
+  font-size: 1.1rem;
+  color: #335577;
+}
+
+/* Sidebar and Content Layout */
+.privacy-main {
+  display: flex;
+  padding: 80px 10%;
+  gap: 100px;
+}
+
+.privacy-sidebar {
+  flex: 0 0 200px;
+}
+
+.privacy-sidebar ul {
+  list-style: none;
+  padding: 0;
+  position: sticky;
+  top: 40px;
+}
+
+.privacy-sidebar li {
+  margin-bottom: 20px;
+  cursor: pointer;
+  color: #666;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.privacy-sidebar li.active, 
+.privacy-sidebar li:hover {
+  color: #000;
+}
+
+/* Right Side Content Styling */
+.privacy-content {
+  flex: 1;
+  max-width: 800px;
+}
+
+.intro-text {
+  margin-bottom: 40px;
+  font-size: 1.05rem;
+}
+
+.policy-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.policy-section ul {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.policy-section li {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.policy-section li::before {
+  content: "-";
+  position: absolute;
+  left: -20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .privacy-main {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .privacy-hero {
+    padding: 60px 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}

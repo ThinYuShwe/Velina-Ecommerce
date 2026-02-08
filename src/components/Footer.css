@@ -90,6 +90,7 @@
   text-decoration: none;
   font-family: var(--roundFont);
   color: black;
+  font-size: 1rem;
 }
 
 .footer-links-title {
@@ -99,15 +100,19 @@
   font-size: 0.7rem;
 }
 
-.footer-links-list {
+.footer-links-lists {
   display: flex;
   flex-direction: column;
   list-style: none;
-  gap: 1rem;
+  gap: 1.1rem;
+  text-decoration: none;
 }
 
-.footer-links-list li {
-  font-size: 0.8rem;
+.footer-links-list {
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  font-family: var(--roundFont);
 }
 
 /* Footer Bottom */

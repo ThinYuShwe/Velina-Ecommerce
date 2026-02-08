@@ -41,29 +41,34 @@ export function Footer() {
           <div className="footer-links-left">
             <div className="footer-links-group">
               <h3 className="footer-links-title">Products</h3>
-              <nav className="footer-links-list">
-                <Link to="/women">Women</Link>
-                <Link to="/men">Men</Link>
-                <Link to="/">Collections</Link>
-                <Link to="/women">Categories</Link>
+              <nav className="footer-links-lists">
+                <Link to="/women" className="footer-links-list">
+                  Women
+                </Link>
+                <Link to="/men" className="footer-links-list">
+                  Men
+                </Link>
+                <Link to="/" className="footer-links-list">
+                  Collections
+                </Link>
               </nav>
             </div>
 
             <div className="footer-links-group">
               <h3 className="footer-links-title">Company</h3>
-              <ul className="footer-links-list">
+              <ul className="footer-links-lists">
                 <li>
                   <Link to="/aboutus" className="footer-link">
                     About Us
                   </Link>
                 </li>
-                <li>Careers</li>
+
                 <li>
                   <Link to="/contact" className="footer-link">
                     Contact Us
                   </Link>
                 </li>
-                <li>Stores</li>
+
                 <li>
                   <Link to="/journal" className="footer-link">
                     Journal
@@ -75,7 +80,7 @@ export function Footer() {
           <div className="footer-links-right">
             <div className="footer-links-group">
               <h3 className="footer-links-title">Find us on</h3>
-              <ul className="footer-links-list">
+              <ul className="footer-links-lists">
                 <li>Instagram</li>
                 <li>Twitter</li>
                 <li>Threads</li>
@@ -85,11 +90,22 @@ export function Footer() {
 
             <div className="footer-links-group">
               <h3 className="footer-links-title">Legal</h3>
-              <ul className="footer-links-list">
-                <li>Terms & Conditions</li>
-                <li>Privacy Policy</li>
-                <li>Shipping & Return</li>
-                <li>404</li>
+              <ul className="footer-links-lists">
+                <li>
+                  <Link to="/legal" className="footer-links-list">
+                    Terms & Conditions
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/privacy" className="footer-links-list">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/shipping" className="footer-links-list">
+                    Shipping & Return
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

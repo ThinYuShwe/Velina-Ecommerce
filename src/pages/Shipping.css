@@ -1,0 +1,184 @@
+/* Base Page Setup */
+.Shipping-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Header Section with Soft Purple/Pink Gradient */
+.shipping-header-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 480px;
+  /* Matching the pinkish hue from your Shipping screenshot */
+  background: linear-gradient(180deg, #f5eef8 0%, #ffffff 100%);
+  padding: 0 10%;
+  position: relative;
+}
+
+/* Add the floating arm image via CSS if not in JSX */
+.shipping-header-section::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+  height: 90%;
+  background-image: url('../assets/shipping-hero.png'); /* Ensure path is correct */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom right;
+  opacity: 0.9;
+}
+
+.shipping-header-content {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.Shipping-title {
+  font-size: 4rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+  font-family: var(--roundFont);
+}
+
+.Shipping-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 450px;
+  font-family: var(--roundFont);
+}
+
+/* Main Content Body Layout */
+.Shipping-body {
+  display: flex;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 40px;
+  gap: 120px; /* Spacious gap between sidebar and text */
+  font-family: var(--roundFont);
+}
+
+/* Sidebar Styling */
+.Shipping-sidebar {
+  flex: 0 0 220px;
+}
+
+.Shipping-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 120px; /* Sticks the menu while scrolling */
+  font-family: var(--roundFont);
+}
+
+.Shipping-nav-link {
+  text-decoration: none;
+  color: #999;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: var(--roundFont);
+}
+
+.Shipping-nav-link:hover {
+  color: #000;
+}
+
+.Shipping-nav-link.active {
+  color: #000;
+  font-weight: 600;
+  position: relative;
+}
+
+/* Main Text Content Styling */
+.Shipping-text-content {
+  flex: 1;
+  font-family: var(--roundFont);
+}
+
+.Shipping-section {
+  margin-bottom: 60px;
+  font-family: var(--roundFont);
+}
+
+.Shipping-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #000;
+  font-family: var(--roundFont);
+}
+
+.Shipping-section p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 20px;
+  font-family: var(--roundFont);
+}
+
+.Shipping-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.Shipping-section li {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  position: relative;
+  font-family: var(--roundFont);
+}
+
+/* Simple custom bullet point */
+.Shipping-section li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #000;
+}
+
+/* Responsive Tablet/Mobile Design */
+@media (max-width: 1024px) {
+  .Shipping-body {
+    flex-direction: column;
+    gap: 50px;
+    margin: 60px auto;
+  }
+
+  .Shipping-sidebar {
+    flex: none;
+    width: 100%;
+  }
+
+  .Shipping-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: static;
+    gap: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+  }
+
+  .Shipping-header-section {
+    height: auto;
+    padding: 140px 5% 60px 5%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .Shipping-header-section::after {
+    display: none; /* Hide background image on smaller screens for readability */
+  }
+
+  .Shipping-title {
+    font-size: 2.8rem;
+  }
+}
