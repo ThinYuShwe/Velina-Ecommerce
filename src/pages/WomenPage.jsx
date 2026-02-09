@@ -122,8 +122,10 @@ export function WomenPage() {
               <article key={product.id} className="women-product-card">
                 <div className="women-product-image-container">
                   <Link to={`/product/${product.id}`}>
-                    {/* Paths now pull from public folder via JSON */}
-                    <img src={product.img} alt={product.name} />
+                    <img
+                      src={`${import.meta.env.BASE_URL}${(product.img || "").replace("public/", "")}`}
+                      alt={product.name}
+                    />
                   </Link>
                 </div>
                 <div className="women-product-details">

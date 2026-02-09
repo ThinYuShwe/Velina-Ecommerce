@@ -119,7 +119,10 @@ export function MenPage() {
               <article key={product.id} className="men-product-card">
                 <div className="men-product-image-container">
                   <Link to={`/product/${product.id}`}>
-                    <img src={product.img} alt={product.name} />
+                    <img
+                      src={`${import.meta.env.BASE_URL}${(product.img || "").replace("public/", "")}`}
+                      alt={product.name}
+                    />
                   </Link>
                 </div>
                 <div className="men-product-details">
