@@ -1,3 +1,6 @@
+// Note: If you see "Failed to load resource: net::ERR_BLOCKED_BY_CLIENT" only when
+// running locally, it's usually an ad/privacy extension blocking the request.
+// Try: disable the extension for localhost, or use an incognito/private window.
 import React from 'react';
 import './PrivacyPolicy.css';
 import { Header } from "../components/Header.jsx";

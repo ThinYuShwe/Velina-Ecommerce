@@ -13,6 +13,7 @@ import JournalDetail from "./pages/JournalDetail.jsx";
 import LegalPage from "./pages/LegalPage.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import Shipping from "./pages/Shipping.jsx";
+import ThankYou from "./pages/ThankYou.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import ScrollToTop from "./components/ScrollToTop";
@@ -35,7 +36,8 @@ function App() {
         <Route path="/men" element={<MenPage />} />
         <Route path="/legal" element={<LegalPage />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
-         <Route path="/shipping" element={<Shipping />} />
+        <Route path="/shipping" element={<Shipping />} />
+        <Route path="/thankyou" element={<ThankYou />} />
       </Routes>
     </>
   );

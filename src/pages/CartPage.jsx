@@ -5,12 +5,14 @@ import "./CartPage.css";
 import "../index.css";
 import Features from "../components/Features.jsx";
 // Mock data based on your assets
-
-import React from "react";
+import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import { useCart } from "../context/CartContext";
 
 export function CartPage() {
+  const navigate = useNavigate();
   const { cartItems, updateQuantity, removeItem } = useCart();
+  const [showEmptyCartMessage, setShowEmptyCartMessage] = useState(false);
 
   // 3. Keep your subtotal logic (it works the same!)
   const subtotal = cartItems.reduce(
@@ -97,13 +99,48 @@ export function CartPage() {
                 <span>Total</span>
                 <span>${totalAmount.toFixed(2)} USD</span>
               </div>
-              <button className="checkout-btn">Checkout Now</button>
+              <button
+                className="checkout-btn"
+                onClick={() => {
+                  if (cartItems.length === 0) {
+                    setShowEmptyCartMessage(true);
+                    return;
+                  }
+                  navigate("/thankyou");
+                }}
+              >
+                Checkout Now
+              </button>
             </div>
           </aside>
         </div>
       </div>
       <Features />
       <Footer />
+
+      {showEmptyCartMessage && (
+        <div
+          className="cart-message-overlay"
+          onClick={() => setShowEmptyCartMessage(false)}
+          role="presentation"
+        >
+          <div
+            className="cart-message-box"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <p className="cart-message-text">
+              Your cart is empty. Please add items before checkout.
+            </p>
+            <button
+              type="button"
+              className="cart-message-btn"
+              onClick={() => setShowEmptyCartMessage(false)}
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
